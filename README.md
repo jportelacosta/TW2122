@@ -7,3 +7,5 @@ Bruno Duarte 26216 : https://github.com/DogEatTurtle/TW2122
 
 Diogo Gonçalves:20729 - https://github.com/BIGGIE97/TW2122
 
+João Pires 23804 : https://github.com/joaopires111/TW2122
+
