@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #bb9f80;
+    color: #fff;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h2 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.buttons a {
+    margin: 5px;
+    padding: 20px;
+}
+
+.active {
+    background-color: #f5cc97;
+}
+
+.items {
+
+}
+
+.item {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    height: 200px;
+    margin: 1%;
+    float: left;
+    width: 48%;
+    border-radius: 8px;
+}
+
+.item-img {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.item-img img {
+    height: 100%;
+}
+
+.item-content {
+    width: 27%;
+    background-color: #ffffff;
+    height: 100%;
+    float: left;
+    margin-left: 3%;
+}
+
+.item-content h3 {
+    color: orange;
+    font-size: 1.4rem;
+}
+
+.item-content .category {
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+.item-content .rating {
+ color: saddlebrown;
+}
