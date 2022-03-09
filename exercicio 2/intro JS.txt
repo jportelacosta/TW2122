@@ -1,0 +1,9 @@
+Make those examples in the exercice 2
+
+window.setTimeout(function,milliseconds);
+window.setInterval(function,milliseconds);
+window.clearTimeout(timeoutVariable)
+window.clearInterval(timerVariable)
+window.alert()
+window.confirm()
+window.prompt()
