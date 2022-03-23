@@ -1,42 +1,44 @@
-const buttons = document.
-getElementsByClassName('menu-btn');
+function generateKey() {
+    console.log("Generate Euromilhões Key");
 
-const itens = document.
-getElementsByClassName('food-item');
+    const key = {
+        numbers: generateXNumbersBetweenMinAnsMax(length: 5, minNumber: 1, maxNumber: 50),
+        stars: generateXNumbersBetweenMinAnsMax(length:2, minNumber:1, maxNumber:12)
+    }
 
-let clickedButton = 'featured';
-selectItens(clickedButton);
+    key.numbers = sortIntArray(key.numbers);
+    key.stars = sortIntArray(key.stars);
 
-for( let button of buttons ) {
-    button.addEventListener(
-        'click',
-        () => {
-            selectItens(button.id);
-        }
-    )
+    addKeyToHtmlTable(key)
 }
 
-function selectItens( id ) {
-    clickedButton = id;
+funcion generateXNumbersBetweenMinAnsMax(length, minNumber, maxNumber) {
+    let numbers = [];
 
-    // removo todas as classes active dos butões
-    for( let button of buttons ) {
-        button.className = 'menu-btn';
+    while(numbers.length < length){
+        let randomNumber = Math.random() * (maxNumber - minNumber) + minNumber;
+        numbers.push(randomNumber);
     }
 
-    // pelo id recebido, pego no buttao carregado
-    // aplico a class de butao activo
-    let button = document.getElementById(id);
-    button.className = 'menu-btn active-btn';
+    console.log(numbers);
+    return numbers;
+}
 
-    for( let item of itens ) {
-        // o item é um element HTML.
-        if(item.className === 'food-item '+ clickedButton)
-        {
-            // mostrar os itens com a class drinks
-            item.style.display = 'grid';
-        } else {
-            item.style.display = 'none';
-        }
-    }
+function sortArray(array) {
+    return array.sort((a,b) => a-b)
+}
+
+function addKeyToHtmlTable(key) {
+    const table = document.getElementById(elementid: "tableKey");
+    let tbody = table.children[0];
+
+    tbody.innerHTML = tbody.innerHTML
+        + '<tr>'
+            + '<td>' + key.numbers.join(' - ') +
+            + '**' + key.stars.join(' - ') + '</td>'
+            + '<td>' + sortIntoArray(key.numbers).join('-') + '</td>'
+            + '<td>' + sortIntArray(key.stars).join (' - ') + '</td>'
+        + '</tr>'
+
+    console.log(tbody);
 }
